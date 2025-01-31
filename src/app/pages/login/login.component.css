@@ -1,45 +1,150 @@
+/* Font import and global reset */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-.container{
-    box-shadow: 0px 0px 30px -10px;
-    padding-bottom: 40px;
-    margin-top: 50px;
- }
-
-.img-fluid {
-    max-width: 100%;
-    height: auto;
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
 }
 
-.form-control {
-    height: 50px;
-    font-size: 18px;
-    border-radius: 5px;
+/* Body styling */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
 }
 
-.btn-lg {
-    width: 40%;
-    height: 50px;
-    font-size: 18px;
+/* Section styles */
+section {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
 }
 
-.mt-4 {
-    margin-top: 40px;
+/* Animated background effect */
+section::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#000, rgb(0, 162, 255), #000);
+    animation: animate 5s linear infinite;
+    z-index: -1;
 }
 
-/* Media query for mobile devices */
-@media (max-width: 800px) {
-    .btn-lg {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px; 
+@keyframes animate {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
     }
 }
 
-/* Media query for mobile devices */
-@media (max-width: 576px) {
-    .btn-lg {
-        display: block;
-        width: 100%;
-        margin-bottom: 10px; 
+/* Styling for grid effect */
+section span {
+    position: relative;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #181818;
+    transition: 1s;
+}
+
+section span:hover {
+    background: rgb(0, 162, 255);
+    transition: 0s;
+}
+
+/* Container for registration form */
+.container {
+    position: relative;
+    background: #222;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    width: 80%;
+    max-width: 500px;
+}
+
+h2 {
+    color: rgb(0, 162, 255);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Form styling */
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    background: #333;
+    border: none;
+    outline: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form input::placeholder {
+    color: #aaa;
+}
+
+/* Buttons */
+.btn {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-info {
+    background: rgb(0, 162, 255);
+    color: white;
+    border: none;
+}
+
+.btn-danger {
+    background: red;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    .btn {
+        font-size: 12px;
     }
 }
