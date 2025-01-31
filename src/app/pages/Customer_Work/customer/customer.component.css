@@ -1,34 +1,93 @@
-/* bus-search.component.css */
-.bus-cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .bus-card {
-    width: 250px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .card-header h4 {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
-    font-size: 18px;
-  }
-  
-  .card-body {
-    margin-top: 10px;
-  }
-  
-  .bus-image {
-    max-width: 100%;
-    height: auto;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/background.jpg'); /* Add your background image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 2rem;
     border-radius: 8px;
-  }
-  
-  .bus-card p {
-    margin: 5px 0;
-  }
-  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="button"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+button[type="button"]:last-child {
+    background-color: #6c757d;
+    margin-left: 0.5rem;
+}
+
+button[type="button"]:last-child:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .col-md-6 {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    button[type="button"]:last-child {
+        margin-left: 0;
+    }
+}
