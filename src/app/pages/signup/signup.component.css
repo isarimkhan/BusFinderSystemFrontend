@@ -1,77 +1,139 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Light background color */
-    margin: 0;
-    padding: 0;
-}
-
-/* Container Styles */
+/* General Container Styling */
 .container {
-    max-width: 600px; /* Set a max width for the container */
-    margin: 50px auto; /* Center the container */
+    width: 80%;
+    margin: 0 auto;
+    background-color: #F0F3F5; /* Background color updated */
     padding: 20px;
-    background-color: #ffffff; /* White background for the form */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 8px;
 }
 
-/* Heading Styles */
-h2 {
-    color: #333; /* Darker text color for the heading */
-    margin-bottom: 20px; /* Space below the heading */
+/* Row and Form Layout */
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
-/* Form Group Styles */
-.form-group {
-    margin-bottom: 15px; /* Space between form groups */
+.col-12 {
+    width: 100%;
 }
 
-/* Input Styles */
-.form-control {
-    width: 100%; /* Full width for inputs */
-    padding: 10px; /* Padding inside inputs */
-    border: 1px solid #ced4da; /* Light border */
-    border-radius: 4px; /* Rounded corners */
-    transition: border-color 0.3s; /* Smooth transition for border color */
+.col-md-6 {
+    width: 50%;
 }
 
-.form-control:focus {
-    border-color: #80bdff; /* Change border color on focus */
-    outline: none; /* Remove default outline */
+.text-center {
+    text-align: center;
 }
 
-/* Button Styles */
+/* Styling the Image Section */
+.image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Form Styling */
+.form-container {
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #D7DCE1; /* Form background color updated */
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Error Styling */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
 button {
-    padding: 10px 20px; /* Padding for buttons */
-    border: none; /* Remove default border */
-    border-radius: 4px; /* Rounded corners */
-    color: #fff; /* White text color */
-    background-color: #007bff; /* Primary button color */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for background color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #0056b3; /* Darker shade on hover */
+button[type="submit"] {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
 }
 
-/* Clear Button Styles */
-button:nth-child(2) {
-    background-color: #6c757d; /* Secondary button color */
+button[type="submit"]:hover {
+    background-color: #138496;
 }
 
-button:nth-child(2):hover {
-    background-color: #5a6268; /* Darker shade on hover */
+button[type="button"] {
+    background-color: #dc3545;
+    color: white;
+    border: none;
 }
 
-/* Responsive Styles */
+button[type="button"]:hover {
+    background-color: #c82333;
+}
+
+/* Form Title */
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Margin Adjustments */
+.mt-4 {
+    margin-top: 40px;
+}
+
+/* Input Container */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .container {
-        padding: 15px; /* Adjust padding for smaller screens */
+    .col-md-6 {
+        width: 100%;
     }
+}
+/* Error Styling */
+.error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none; /* Hide the error by default */
+}
 
-    h2 {
-        font-size: 1.5rem; /* Adjust heading size */
-    }
+.error.show {
+    display: block; /* Show the error when needed */
 }

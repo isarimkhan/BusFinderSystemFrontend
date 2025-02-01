@@ -14,6 +14,9 @@ import { Router } from '@angular/router';
   styleUrl: './signup.component.css'
 })
 export class SignupComponent {
+clearForm() {
+throw new Error('Method not implemented.');
+}
   
   constructor(private userService:UserService, private router:Router){}
     public users = {

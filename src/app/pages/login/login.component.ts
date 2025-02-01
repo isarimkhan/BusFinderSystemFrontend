@@ -13,6 +13,12 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+onLogin() {
+throw new Error('Method not implemented.');
+}
+onClear() {
+throw new Error('Method not implemented.');
+}
 
   constructor(private loginService:LoginService,private route:Router){}
 

@@ -1,6 +1,6 @@
-/* General Styles */
+/* General Styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     background-color: #F0F3F5;
     margin: 0;
     padding: 0;
@@ -8,154 +8,104 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    animation: fadeIn 1s ease-in-out;
 }
 
-/* Fade-in effect for the page */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.form-container {
-    width: 100%;
+/* Container */
+.login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-}
-
-.form-wrapper {
-    background-color: #fff;
-    padding: 40px 50px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
-    box-sizing: border-box;
-    opacity: 0;
-    animation: slideIn 1s ease-in-out forwards;
+    height: 100vh;
 }
 
-@keyframes slideIn {
-    0% {
-        transform: translateY(-50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-h2 {
+/* Login Box */
+.login-box {
+    background: #D7DCE1;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(73, 228, 107, 0.1);
+    width: 350px;
     text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-    font-size: 1.8rem;
 }
 
-/* Input Group Styles */
-.input-group {
+/* Heading */
+h2 {
+    color: #333;
     margin-bottom: 20px;
 }
 
-.input-group input {
+/* Form Styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+input {
     width: 100%;
     padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    transition: border-color 0.3s, transform 0.3s;
-    animation: inputAnimation 1.2s ease-in-out;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-@keyframes inputAnimation {
-    0% {
-        transform: scale(0.95);
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-.input-group input:focus {
-    border-color: #4CAF50;
+input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.2);
-    transform: scale(1.05);
 }
 
-/* Button Styles */
+/* Buttons */
 .actions {
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
-button {
-    padding: 12px 20px;
-    border-radius: 6px;
+.btn-submit, 
+.btn-clear {
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    font-size: 1rem;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
+    transition: 0.3s;
     width: 48%;
 }
 
 .btn-submit {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.btn-submit:hover {
-    background-color: #45a049;
-    transform: scale(1.05);
+    background-color: #007bff;
+    color: #fff;
 }
 
 .btn-clear {
-    background-color: #f44336;
-    color: white;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
 }
 
 .btn-clear:hover {
-    background-color: #e53935;
-    transform: scale(1.05);
+    background-color: #a71d2a;
 }
 
-/* Register Link Styles */
+/* Register Link */
 .register-link {
     margin-top: 20px;
-    text-align: center;
-    font-size: 0.9rem;
-    color: #555;
+    font-size: 14px;
+    color: #333;
 }
 
 .register-link a {
-    color: #4CAF50;
+    color: #007bff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: 0.3s;
 }
 
 .register-link a:hover {
-    color: #45a049;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .form-wrapper {
-        padding: 30px 40px;
-    }
-    button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+    text-decoration: underline;
 }
