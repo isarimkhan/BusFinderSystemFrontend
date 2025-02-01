@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f5f1; /* Light green background */
+    color: #333;
+  }
+  
+  .container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Heading Styles */
+  h2 {
+    text-align: center;
+    color: #4CAF50; /* Vintage green color */
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Form and Input Styles */
+  input.form-control, textarea.form-control {
+    background-color: #f0f5f1; /* Light green background */
+    border: 2px solid #4CAF50;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  input.form-control:focus, textarea.form-control:focus {
+    border-color: #388E3C; /* Darker green on focus */
+    outline: none;
+    transform: scale(1.02);
+  }
+  
+  input[type="number"] {
+    -moz-appearance: textfield; /* Removes spinner */
+  }
+  
+  input[type="file"] {
+    background-color: #f0f5f1;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+  }
+  
+  input[type="file"]:hover {
+    background-color: #388E3C;
+    color: white;
+  }
+  
+  /* Button Styles */
+  button.btn-primary {
+    background-color: #4CAF50;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  button.btn-primary:hover {
+    background-color: #388E3C; /* Darker green */
+    transform: scale(1.1);
+  }
+  
+  button.btn-primary:disabled {
+    background-color: #a5d6a7;
+    cursor: not-allowed;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #388E3C; /* Darker green for label text */
+  }
+  
+  /* Image Preview */
+  .text-center img {
+    border: 4px solid #4CAF50;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .text-center img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Row and Column Styles */
+  .row {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    .row {
+      margin-bottom: 15px;
+    }
+  }
+  
