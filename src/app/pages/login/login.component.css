@@ -1,7 +1,7 @@
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #F0F3F5;
+    background-color: #F8EDEB;
     margin: 0;
     padding: 0;
     display: flex;
@@ -17,21 +17,36 @@ body {
     align-items: center;
     width: 100%;
     height: 100vh;
+    flex-direction: column;
 }
 
 /* Login Box */
 .login-box {
-    background: #D7DCE1;
+    background: #E0E0E0; /* Light Grey */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(73, 228, 107, 0.1);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
     width: 350px;
     text-align: center;
+    position: relative;
+}
+
+/* Logo */
+.login-box::before {
+    content: url(''); /* Replace with your logo image path */
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;  /* Adjust size */
+    height: 60px; /* Adjust size */
 }
 
 /* Heading */
-h2 {
-    color: #333;
+h1 {
+    font-weight: bold;
+    font-size: 36px; /* Adjust the size as needed */
+    color: #B71C1C;  /* Optional: Set a color for the heading */
     margin-bottom: 20px;
 }
 
@@ -43,23 +58,24 @@ h2 {
 input {
     width: 100%;
     padding: 12px;
-    border: 1px solid #bbb;
+    border: none;
     border-radius: 5px;
     font-size: 16px;
     background-color: #fff;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: box-shadow 0.3s;
 }
 
 input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px rgba(183, 28, 28, 0.5);
     outline: none;
 }
 
 /* Buttons */
 .actions {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 15px;
 }
 
@@ -71,36 +87,37 @@ input:focus {
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: 48%;
+    width: 100%;
+    margin-bottom: 10px; /* Adds spacing between buttons */
 }
 
 .btn-submit {
-    background-color: #007bff;
+    background-color: #D32F2F;
     color: #fff;
 }
 
 .btn-clear {
-    background-color: #dc3545;
+    background-color: #B71C1C;
     color: #fff;
 }
 
 .btn-submit:hover {
-    background-color: #0056b3;
+    background-color: #B71C1C;
 }
 
 .btn-clear:hover {
-    background-color: #a71d2a;
+    background-color: #8E0E0E;
 }
 
 /* Register Link */
 .register-link {
     margin-top: 20px;
     font-size: 14px;
-    color: #333;
+    color: #B71C1C;
 }
 
 .register-link a {
-    color: #007bff;
+    color: #D32F2F;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -108,4 +125,20 @@ input:focus {
 
 .register-link a:hover {
     text-decoration: underline;
+    color: #8E0E0E;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    font-size: 14px;
+    color: #D32F2F;
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-weight: normal;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    color: #8E0E0E;
 }
