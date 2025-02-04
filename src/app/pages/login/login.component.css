@@ -31,16 +31,21 @@ body {
     position: relative;
 }
 
+
+/* Logo */
 /* Logo */
 .login-box::before {
-    content: url(''); /* Replace with your logo image path */
+    content: url('/assets/rehnuma.jpg'); 
     position: absolute;
-    top: -40px;
+    top: -60px;  /* Adjust this to position the logo above */
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;  /* Adjust size */
-    height: 60px; /* Adjust size */
+    width: 60px;  
+    height: 60px;
+    display: block; /* Ensure the image is rendered as a block element */
 }
+
+
 
 /* Heading */
 h1 {
@@ -130,15 +135,19 @@ input:focus {
 
 /* Forgot Password Link */
 .forgot-password {
-    font-size: 14px;
-    color: #D32F2F;
-    text-decoration: none;
-    display: block;
     margin-top: 15px;
-    font-weight: normal;
+    font-size: 15px;
+    color: #B71C1C;
 }
 
-.forgot-password:hover {
+.forgot-password a {
+    color: #D32F2F;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.forgot-password a:hover {
     text-decoration: underline;
     color: #8E0E0E;
 }
