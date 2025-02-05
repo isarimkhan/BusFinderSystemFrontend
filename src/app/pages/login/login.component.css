@@ -1,7 +1,7 @@
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #F8EDEB;
+    background-color: #F5F5F5;
     margin: 0;
     padding: 0;
     display: flex;
@@ -22,13 +22,14 @@ body {
 
 /* Login Box */
 .login-box {
-    background: #E0E0E0; /* Light Grey */
-    padding: 30px;
+    background: #FFFFFF;
+    padding: 60px 30px 30px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     width: 350px;
     text-align: center;
     position: relative;
+    border-top: 5px solid #EC0016;
 }
 
 /* Logo */
@@ -36,52 +37,54 @@ body {
     width: 60px;
     height: 60px;
     position: absolute;
-    top: -40px;  /* Adjust this to position the logo above */
+    top: -40px;
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    z-index: 1;  /* Ensure the logo appears on top */
+    z-index: 1;
 }
 
-/* Add the image directly in the HTML for testing */
-.login-box {
-    background: #E0E0E0;
-    padding: 80px 30px 30px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
-    width: 350px;
-    text-align: center;
+/* Input Field Container */
+.input-container {
     position: relative;
-}
-
-
-/* Heading */
-h1 {
-    font-weight: bold;
-    font-size: 36px; /* Adjust the size as needed */
-    color: #41C5C1;  /* Set the heading color */
-    margin-bottom: 20px;
-}
-
-/* Form Styling */
-.form-group {
+    width: 100%;
     margin-bottom: 15px;
 }
 
+/* Input Fields */
 input {
     width: 100%;
-    padding: 8px;  /* Decreased padding to reduce the height */
-    border: none;
+    padding: 10px 40px; /* Added left padding for icon */
+    border: 1px solid #A0A0A0;
     border-radius: 5px;
-    font-size: 16px;
-    background-color: #fff;
-    transition: box-shadow 0.3s;
+    font-size: 14px;
+    background-color: #FFFFFF;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    height: 40px; /* Adjust height */
+    box-shadow: 0 0 5px rgba(160, 160, 160, 0.5);
 }
 
-
+/* Input Focus Effect */
 input:focus {
-    box-shadow: 0 0 5px rgba(64, 197, 193, 0.5); /* Adjust focus color */
+    box-shadow: 0 0 10px rgba(236, 0, 22, 0.5);
+    border-color: #EC0016;
     outline: none;
+}
+
+/* Placeholder Color */
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* Input Icons - Now Inside the Input Field */
+.input-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #EC0016; /* DB Navigator Red */
+    font-size: 16px;
 }
 
 /* Buttons */
@@ -95,68 +98,188 @@ input:focus {
 
 .btn-submit, 
 .btn-clear {
-    padding: 10px 20px;
+    padding: 8px 20px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
     width: 100%;
-    margin-bottom: 10px; /* Adds spacing between buttons */
+    margin-bottom: 10px;
 }
 
 .btn-submit {
-    background-color: #41C5C1; /* Set the button background color */
+    background-color: #EC0016;
     color: #fff;
 }
 
 .btn-clear {
-    background-color: #1A9A95; /* Darker shade of the color */
+    background-color: #A00012;
     color: #fff;
 }
 
 .btn-submit:hover {
-    background-color: #359F97; /* Hover color */
+    background-color: #C00012;
 }
 
 .btn-clear:hover {
-    background-color: #147E77; /* Hover color */
+    background-color: #800010;
 }
 
-/* Register Link */
-.register-link {
-    margin-top: 20px;
-    font-size: 14px;
-    color: #41C5C1; /* Set the link color */
-}
-
-.register-link a {
-    color: #359F97; /* Set the link hover color */
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.register-link a:hover {
-    text-decoration: underline;
-    color: #147E77; /* Hover link color */
-}
-
-/* Forgot Password Link */
+/* Register & Forgot Password Links */
+.register-link, 
 .forgot-password {
     margin-top: 15px;
     font-size: 15px;
-    color: #41C5C1; /* Set the link color */
+    color: #EC0016;
 }
 
+.register-link a, 
 .forgot-password a {
-    color: #359F97; /* Set the link hover color */
+    color: #C00012;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
 }
 
+.register-link a:hover, 
 .forgot-password a:hover {
     text-decoration: underline;
-    color: #147E77; /* Hover link color */
+    color: #800010;
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Login Box */
+.login-box {
+    background: #FFFFFF;
+    padding: 60px 30px 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    position: relative;
+    border-top: 5px solid #EC0016;
+}
+
+/* Logo */
+.logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    z-index: 1;
+}
+
+/* Heading */
+h1 {
+    font-weight: bold;
+    font-size: 48px;  /* Increased size */
+    color: #EC0016;   /* Changed to DB Navigator Red */
+    margin-bottom: 20px;
+}
+
+
+input:focus {
+    box-shadow: 0 0 10px rgba(236, 0, 22, 0.5);
+    border-color: #EC0016;
+    outline: none;
+}
+
+/* Placeholder Color */
+input::placeholder {
+    color: rgba(107, 101, 101, 0.5);
+}
+
+/* Input Icons - Now Inside the Input Field */
+.input-container i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #EC0016; /* DB Navigator Red */
+    font-size: 16px;
+}
+
+/* Buttons */
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.btn-submit, 
+.btn-clear {
+    padding: 8px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.btn-submit {
+    background-color: #EC0016;
+    color: #fff;
+}
+
+.btn-clear {
+    background-color: #A00012;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #C00012;
+}
+
+.btn-clear:hover {
+    background-color: #800010;
+}
+
+/* Register & Forgot Password Links */
+.register-link, 
+.forgot-password {
+    margin-top: 15px;
+    font-size: 15px;
+    color: #EC0016;
+}
+
+.register-link a, 
+.forgot-password a {
+    color: #C00012;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.register-link a:hover, 
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: #800010;
 }
