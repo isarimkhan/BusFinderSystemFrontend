@@ -32,22 +32,34 @@ body {
 }
 
 /* Logo */
-.login-box::before {
-    content: url('/assets/rehnuma.png'); 
+.logo {
+    width: 60px;
+    height: 60px;
     position: absolute;
-    top: -60px;  /* Adjust this to position the logo above */
+    top: -40px;  /* Adjust this to position the logo above */
     left: 50%;
     transform: translateX(-50%);
-    width: 60px;  
-    height: 60px;
-    display: block; /* Ensure the image is rendered as a block element */
+    display: block;
+    z-index: 1;  /* Ensure the logo appears on top */
 }
+
+/* Add the image directly in the HTML for testing */
+.login-box {
+    background: #E0E0E0;
+    padding: 80px 30px 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
 
 /* Heading */
 h1 {
     font-weight: bold;
     font-size: 36px; /* Adjust the size as needed */
-    color: #80CAD0;  /* Soft blue color for the heading */
+    color: #41C5C1;  /* Set the heading color */
     margin-bottom: 20px;
 }
 
@@ -58,7 +70,7 @@ h1 {
 
 input {
     width: 100%;
-    padding: 12px;
+    padding: 8px;  /* Decreased padding to reduce the height */
     border: none;
     border-radius: 5px;
     font-size: 16px;
@@ -66,8 +78,9 @@ input {
     transition: box-shadow 0.3s;
 }
 
+
 input:focus {
-    box-shadow: 0 0 5px rgba(128, 202, 208, 0.5); /* Soft blue shadow */
+    box-shadow: 0 0 5px rgba(64, 197, 193, 0.5); /* Adjust focus color */
     outline: none;
 }
 
@@ -93,32 +106,32 @@ input:focus {
 }
 
 .btn-submit {
-    background-color: #80CAD0; /* Soft blue */
+    background-color: #41C5C1; /* Set the button background color */
     color: #fff;
 }
 
 .btn-clear {
-    background-color: #4C9D9B; /* A darker shade of the theme */
+    background-color: #1A9A95; /* Darker shade of the color */
     color: #fff;
 }
 
 .btn-submit:hover {
-    background-color: #4C9D9B; /* Darker shade on hover */
+    background-color: #359F97; /* Hover color */
 }
 
 .btn-clear:hover {
-    background-color: #2A6564; /* Even darker on hover */
+    background-color: #147E77; /* Hover color */
 }
 
 /* Register Link */
 .register-link {
     margin-top: 20px;
     font-size: 14px;
-    color: #80CAD0;  /* Soft blue */
+    color: #41C5C1; /* Set the link color */
 }
 
 .register-link a {
-    color: #80CAD0;  /* Soft blue */
+    color: #359F97; /* Set the link hover color */
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -126,18 +139,18 @@ input:focus {
 
 .register-link a:hover {
     text-decoration: underline;
-    color: #4C9D9B; /* Darker blue on hover */
+    color: #147E77; /* Hover link color */
 }
 
 /* Forgot Password Link */
 .forgot-password {
     margin-top: 15px;
     font-size: 15px;
-    color: #80CAD0;  /* Soft blue */
+    color: #41C5C1; /* Set the link color */
 }
 
 .forgot-password a {
-    color: #80CAD0;  /* Soft blue */
+    color: #359F97; /* Set the link hover color */
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
@@ -145,5 +158,5 @@ input:focus {
 
 .forgot-password a:hover {
     text-decoration: underline;
-    color: #4C9D9B; /* Darker blue on hover */
+    color: #147E77; /* Hover link color */
 }
