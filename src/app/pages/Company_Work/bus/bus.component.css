@@ -66,6 +66,7 @@ body {
   color: #EC0016; /* Red color for label */
   white-space: nowrap;
   margin:15px;
+  justify-content: flex-start;
 }
 
 /* Animated Input Fields */
@@ -129,8 +130,8 @@ button.btn-primary:disabled {
 }
 
 /* Heading Styling */
-h1 {
-  font-size: 2.5rem;
+h3 {
+  font-size: 2rem;
   color: #EC0016; /* Red color */
   font-weight: 700;
   letter-spacing: 1px;
