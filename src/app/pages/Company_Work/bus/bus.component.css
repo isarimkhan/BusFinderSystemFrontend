@@ -1,23 +1,34 @@
 /* General Page Styles */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f1e1; /* Light vintage cream background */
+  background-color: #ffffff; /* Light background */
   margin: 0;
   padding: 0;
+  color: #333333; /* Dark text for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
 /* Container Styling */
 .container {
   margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Card Styling */
 .bg-white {
-  background-color: #d0e6d9; /* Soft vintage green background */
+  background-color: #f9f9f9; /* Slightly darker than the body for contrast */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   padding: 30px;
   transition: all 0.3s ease-in-out;
+  text-align: center;
 }
 
 /* Hover effect for the form card */
@@ -28,7 +39,7 @@ body {
 /* Image Styling */
 .bus-image {
   border-radius: 50%;
-  border: 4px solid #3a5a40; /* Vintage dark green border */
+  border: 4px solid #cccccc; /* Light gray border */
   transition: transform 0.3s ease-in-out;
 }
 
@@ -41,10 +52,20 @@ body {
 }
 
 /* Form Label and Input Styling */
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* Increased gap between fields */
+  margin-bottom: 20px; /* Increased spacing */
+}
+
 .form-label {
   font-size: 1rem;
   font-weight: 600;
-  color: #3a5a40; /* Dark green color for text */
+  color: #EC0016; /* Red color for label */
+  white-space: nowrap;
+  margin:15px;
 }
 
 /* Animated Input Fields */
@@ -52,20 +73,24 @@ input.form-control {
   border-radius: 8px;
   padding: 15px;
   font-size: 1rem;
-  border: 1px solid #b4c7b1; /* Soft greenish border */
+  border: 1px solid #cccccc; /* Light gray border */
   transition: all 0.3s ease-in-out;
   background-color: #ffffff; /* White background for inputs */
+  text-align: center;
+  flex: 1;
+  margin-bottom: 15px; /* Added gap between input fields */
 }
 
 input.form-control:focus {
-  border-color: #3a5a40; /* Dark green on focus */
+  border-color: #666666; /* Darker gray on focus */
   outline: none;
-  box-shadow: 0 0 8px rgba(58, 90, 64, 0.5); /* Green shadow on focus */
+  box-shadow: 0 0 8px rgba(102, 102, 102, 0.5); /* Gray shadow on focus */
 }
 
 input.form-control::placeholder {
-  color: #7d8f7b; /* Muted green placeholder color */
+  color: #999999; /* Muted gray placeholder color */
   transition: opacity 0.3s ease;
+  text-align: center;
 }
 
 input.form-control:focus::placeholder {
@@ -74,48 +99,58 @@ input.form-control:focus::placeholder {
 
 /* Input Field Hover Effect */
 input.form-control:hover {
-  border-color: #3a5a40; /* Dark green on hover */
+  border-color: #666666; /* Darker gray on hover */
 }
 
 /* Button Styling */
 button.btn-primary {
-  background-color: #3a5a40; /* Vintage dark green button */
+  background-color: #EC0016; /* Red button */
   border: none;
   font-size: 1.1rem;
+  margin-top: 20px;
   padding: 15px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 8px;
   transition: background-color 0.3s ease;
-  color: #fff;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  width: 300px;;
+  white-space: nowrap;
 }
 
 button.btn-primary:hover {
-  background-color: #2e4533; /* Darker green on hover */
+  background-color: rgb(109, 5, 15); /* Darker red on hover */
 }
 
 button.btn-primary:disabled {
-  background-color: #a2b6a0; /* Muted green when disabled */
+  background-color: #EC0016; /* Muted gray when disabled */
 }
 
 /* Heading Styling */
 .heading {
   font-size: 2rem;
-  color: #3a5a40; /* Dark green color */
+  color: #EC0016; /* Red color */
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #e8f3e3; /* Soft greenish background */
+  background-color: #f1f1f1; /* Light gray background */
   padding: 10px 0;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .col-md-8 {
     padding: 0 15px;
+  }
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
@@ -130,6 +165,7 @@ button.btn-primary:disabled {
 
   input.form-control {
     font-size: 0.9rem;
+    margin-bottom: 15px; /* Adjust gap for small screens */
   }
 
   button.btn-primary {
