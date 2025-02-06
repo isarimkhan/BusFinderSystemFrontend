@@ -1,17 +1,19 @@
 /* General Container Styling */
 .container {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
-    background-color: #F0F3F5; /* Background color updated */
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #ffffff; /* Clean, white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
 }
 
 /* Row and Form Layout */
 .row {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    align-items: center;
+    margin-bottom: 30px; /* More space between elements */
 }
 
 .col-12 {
@@ -26,114 +28,147 @@
     text-align: center;
 }
 
-/* Styling the Image Section */
-.image img {
-    max-width: 100%;
-    height: auto;
-}
-
 /* Form Styling */
 .form-container {
     padding: 30px;
-    border: 1px solid #ccc;
+    border: 1px solid #E4E7EB; /* Lighter border for a more subtle look */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #D7DCE1; /* Form background color updated */
-}
-
-input,
-select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-input:focus,
-select:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #F9FAFB; /* Soft background for the form */
 }
 
 /* Error Styling */
 .error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
+    color: #EC0016; /* Using the specified red color */
+    font-size: 14px;
+    margin-top: 8px;
+    display: none;
 }
 
+.error.show {
+    display: block; /* Show the error when needed */
+}
+
+/* Button Styling */
 .buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 30px; /* Space for buttons */
 }
 
 button {
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 150px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    border: none;
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Centers it vertically (if needed) */
+    margin-top: 30px;
+    display: block;
+    margin: 20px auto; /* Centers horizontally */
+    text-align: center;
 }
 
+/* Primary Button (Submit) */
 button[type="submit"] {
-    background-color: #17a2b8;
+    background-color: #EC0016;
     color: white;
-    border: none;
 }
 
 button[type="submit"]:hover {
-    background-color: #138496;
+    background-color: rgb(160, 19, 33);
 }
 
+/* Secondary Button (Cancel) */
 button[type="button"] {
-    background-color: #dc3545;
+    background-color: #EC0016; /* Bright red for secondary button */
     color: white;
-    border: none;
 }
 
 button[type="button"]:hover {
-    background-color: #c82333;
+    background-color: #c40012; /* Darker red on hover */
 }
 
 /* Form Title */
-h2 {
-    font-size: 24px;
-    color: #333;
-    margin-top: 20px;
+/* Form Title */
+h1 {
+    font-size: 40px;
+    color: #EC0016;
+    margin-bottom: 10px; /* Space below the title */
+    margin-top: 20px; /* Space above the title */
     font-weight: bold;
+    text-align: center; /* Center align the heading */
+    width: 100%; /* Ensure the full width is available */
+    margin-left: -220px;
 }
+
 
 /* Margin Adjustments */
 .mt-4 {
-    margin-top: 40px;
+    margin-top: 50px;
+    margin-left: 50px;
 }
 
 /* Input Container */
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased spacing between form elements */
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .col-md-6 {
-        width: 100%;
+        width: 100%; /* Stack elements on smaller screens */
+    }
+
+    .container {
+        width: 100%; /* Full width on mobile */
+        padding: 15px; /* Slightly reduced padding */
+    }
+
+    .form-container {
+        padding: 20px; /* Reduced padding for mobile */
     }
 }
-/* Error Styling */
-.error {
-    color: red;
-    font-size: 12px;
-    margin-top: 5px;
-    display: none; /* Hide the error by default */
+
+/* Style for inputs with icons */
+.input-icon {
+    position: relative;
 }
 
-.error.show {
-    display: block; /* Show the error when needed */
+.input-icon input,
+.input-icon select {
+    padding-left: 40px; /* Add padding to the left side for the icon */
+    width: 100%;
+    padding: 12px 12px 12px 40px; /* Consistent padding, 12px top/bottom and 40px left for icon */
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #d0d6d9;
+    font-size: 16px;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.5; /* Ensures proper vertical alignment */
+}
+
+/* Icon Styling */
+.input-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%; /* Center the icon vertically */
+    transform: translateY(-50%); /* Vertically center the icon */
+    font-size: 18px;
+    color: #EC0016; /* Red for the icon color */
+}
+
+/* Adjust icon color on focus */
+.input-icon input:focus,
+.input-icon select:focus {
+    border-color: #EC0016;
+    background-color: rgb(233, 231, 231);
+}
+
+.input-icon i {
+    color: rgba(7, 7, 7, 0.85); /* Adjusted icon color */
 }
