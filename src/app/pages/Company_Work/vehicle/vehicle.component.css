@@ -1,113 +1,170 @@
 /* General Styles */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f5f1; /* Light green background */
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8; /* Light gray background */
+  color: #333; /* Dark gray text */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white; /* White box */
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+  margin-left: 30%;
+}
+
+/* Heading Styles */
+h2 {
+  text-align: center;
+  color: #EC0016; /* DB Red */
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Center Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #EC0016; /* DB Red */
+  text-align: left;
+  width: 100%;
+  font-size: 1.1rem;
+}
+
+/* Input Fields */
+input.form-control {
+  background-color: #f0eeee;
+  border: 2px solid #ece6e7;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 12px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+input.form-control:focus {
+  border-color: #B00012;
+  outline: none;
+  transform: scale(1.03);
+}
+
+/* Password Field Eye Icon */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 40px; /* Space for icon */
+}
+
+.input-wrapper .toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #EC0016;
+}
+
+/* Button Styles */
+button.btn-primary {
+  background-color: #EC0016;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+button.btn-primary:hover {
+  background-color: #B00012;
+  transform: scale(1.05);
+}
+
+button.btn-primary:disabled {
+  background-color: #ffb3b3;
+  cursor: not-allowed;
+}
+
+/* Forgot Password & Signup Links */
+.extra-links {
+  margin-top: 15px;
+}
+
+.extra-links a {
+  color: #EC0016;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.extra-links a:hover {
+  text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
   }
-  
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
   .container {
-    background-color: white;
-    border-radius: 8px;
-    padding: 40px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 0 auto;
+      padding: 30px;
   }
-  
-  /* Heading Styles */
+
   h2 {
-    text-align: center;
-    color: #4CAF50; /* Vintage green color */
-    font-size: 2rem;
-    margin-bottom: 20px;
+      font-size: 1.6rem;
   }
-  
-  /* Form and Input Styles */
-  input.form-control, textarea.form-control {
-    background-color: #f0f5f1; /* Light green background */
-    border: 2px solid #4CAF50;
-    border-radius: 4px;
-    font-size: 1rem;
-    padding: 10px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  input.form-control:focus, textarea.form-control:focus {
-    border-color: #388E3C; /* Darker green on focus */
-    outline: none;
-    transform: scale(1.02);
-  }
-  
-  input[type="number"] {
-    -moz-appearance: textfield; /* Removes spinner */
-  }
-  
-  input[type="file"] {
-    background-color: #f0f5f1;
-    border: 2px solid #4CAF50;
-    color: #4CAF50;
-  }
-  
-  input[type="file"]:hover {
-    background-color: #388E3C;
-    color: white;
-  }
-  
-  /* Button Styles */
-  button.btn-primary {
-    background-color: #4CAF50;
-    border: none;
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  button.btn-primary:hover {
-    background-color: #388E3C; /* Darker green */
-    transform: scale(1.1);
-  }
-  
-  button.btn-primary:disabled {
-    background-color: #a5d6a7;
-    cursor: not-allowed;
-  }
-  
-  label {
-    font-weight: bold;
-    color: #388E3C; /* Darker green for label text */
-  }
-  
-  /* Image Preview */
-  .text-center img {
-    border: 4px solid #4CAF50;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .text-center img:hover {
-    transform: scale(1.05);
-  }
-  
-  /* Row and Column Styles */
-  .row {
-    margin-bottom: 20px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .container {
-      padding: 20px;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    .row {
-      margin-bottom: 15px;
-    }
-  }
-  
+}
+/* Description Box Styling */
+textarea.form-control {
+  background-color: #f0eeee;
+  border: 2px solid #ece6e7;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  height: 50px; /* Adjust height to make it smaller */
+  max-height: 120px; /* Prevents it from getting too big */
+  resize: vertical; /* Allows resizing only vertically */
+  transition: all 0.3s ease-in-out;
+  text-align: left;
+}
+
+textarea.form-control:focus {
+  border-color: #B00012;
+  outline: none;
+  transform: scale(1.03);
+}
