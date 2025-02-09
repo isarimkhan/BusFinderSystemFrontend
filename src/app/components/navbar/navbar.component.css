@@ -4,18 +4,15 @@
   align-items: center;
   justify-content: space-between;
   background-color: #d71920; /* DB Red */
-  padding: 10px 20px;
+  padding: 20px 10px;
   color: white;
   font-family: Arial, sans-serif;
 }
 
 /* Logo */
 .logo img {
-  height: 50px;  /* Adjust the size as needed */
-  width: auto;
-  border-radius: 8px; /* Optional: rounded corners */
+  height: 40px;
 }
-
 
 /* Search Bar */
 .search-bar {
@@ -36,6 +33,7 @@
   border: none;
   padding: 8px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 /* Navigation Links */
