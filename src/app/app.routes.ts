@@ -35,5 +35,5 @@ export const routes: Routes = [
     {path:'bus_booking', component:BusBookingComponent},
     {path:'transaction', component:TransactionComponent},
     {path:'home', component:HomeComponent},
-    { path: '**', redirectTo: 'bus' }
+    { path: '**', redirectTo: 'vehicle' }
 ];
