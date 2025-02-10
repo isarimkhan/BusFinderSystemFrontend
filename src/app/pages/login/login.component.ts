@@ -87,5 +87,7 @@ export class LoginComponent {
       password : ''
     }
   }
-
+  onLogin() {
+    console.log('Login button clicked!');
+  }
 }
