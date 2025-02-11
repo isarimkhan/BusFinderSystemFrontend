@@ -101,7 +101,7 @@ h1 {
     font-weight: bold;
     text-align: center; /* Center align the heading */
     width: 100%; /* Ensure the full width is available */
-    margin-left: -220px;
+    margin-left: -50%;
 }
 .mt-4 {
     margin-top: 50px;
