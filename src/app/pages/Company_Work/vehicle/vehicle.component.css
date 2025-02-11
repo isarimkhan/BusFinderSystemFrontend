@@ -1,6 +1,5 @@
 /* General Styles */
 body {
-<<<<<<< HEAD
     font-family: 'Arial', sans-serif;
     background-color: #f8f8f8; /* Light gray background */
     color: #333; /* Dark gray text */
@@ -170,16 +169,6 @@ body {
     transform: scale(1.03);
   }
   
-=======
-  font-family: 'Arial', sans-serif;
-  background-color: #f8f8f8; /* Light gray background */
-  color: #333; /* Dark gray text */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
 
 .container {
   background-color: white; /* White box */
@@ -339,4 +328,3 @@ textarea.form-control:focus {
   outline: none;
   transform: scale(1.03);
 }
->>>>>>> 33323e8a4aaaf959df12a65bebd62071997ce0e8

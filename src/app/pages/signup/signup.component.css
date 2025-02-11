@@ -101,15 +101,8 @@ h1 {
     font-weight: bold;
     text-align: center; /* Center align the heading */
     width: 100%; /* Ensure the full width is available */
-<<<<<<< HEAD
-    margin-left: 7%;
-=======
     margin-left: -220px;
->>>>>>> 33323e8a4aaaf959df12a65bebd62071997ce0e8
 }
-
-
-/* Margin Adjustments */
 .mt-4 {
     margin-top: 50px;
     margin-left: 50px;

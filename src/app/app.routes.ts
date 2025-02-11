@@ -28,5 +28,5 @@ export const routes: Routes = [
     {path: 'fare/:busId/:busRouteId', component:FareComponent},
     {path: 'fare-details/:busId', component:FareDetailsComponent},
     {path:'vehicle', component:VehicleComponent},
-    { path: '**', redirectTo: 'login' }
+    { path: '**', redirectTo: 'login'}
 ];
