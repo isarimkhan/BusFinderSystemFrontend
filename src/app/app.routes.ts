@@ -28,12 +28,5 @@ export const routes: Routes = [
     {path: 'fare/:busId/:busRouteId', component:FareComponent},
     {path: 'fare-details/:busId', component:FareDetailsComponent},
     {path:'vehicle', component:VehicleComponent},
-    {path:'firstView', component:FirstViewComponent},
-    {path:'companyFirstView', component:CompanyFirstViewComponent},
-    {path:'carBooking', component:CarBookingComponent},
-    {path:'booking', component:BookingComponent},
-    {path:'bus_booking', component:BusBookingComponent},
-    {path:'transaction', component:TransactionComponent},
-    {path:'home', component:HomeComponent},
     { path: '**', redirectTo: 'login' }
 ];

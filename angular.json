@@ -28,12 +28,16 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
                "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            ],
+            "styles": [
+  "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+  "src/styles.css"
+]
+
           },
           "configurations": {
             "production": {
@@ -89,6 +93,7 @@
               }
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,6 +103,6 @@
     }
   },
   "cli": {
-    "analytics": "c9fbe279-0f7b-40d0-a46a-21fdc7638433"
+    "analytics": "45870ae5-8a3c-4a8e-9173-2401a3116d6e"
   }
 }
