@@ -1,17 +1,101 @@
 <nav class="navbar">
-    <div class="left">
-      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
-      <label for="menu-toggle" class="menu-btn">
-        <i class="fa-solid fa-bars"></i>
-      </label>
-      <img src="/public/rehnuma-R.png" alt="Rahnuma" class="logo" />
+    <div class="navbar-brand">
+      <button class="menu-toggle" (click)="toggleMenu()">
+        <span [class.active]="isMenuOpen">☰</span>
+      </button>
+      <a href="/" class="logo">
+        <img src="/assets/images/rehnuma-R.png" alt="Rehnuma" />
+     </a>
     </div>
-    <ul class="nav-links">
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/routes">Routes</a></li>
-      <li><a routerLink="/tickets">Tickets</a></li>
-      <li><a routerLink="/settings">Settings</a></li>
-    </ul>
+  
+    <div class="nav-links" [class.active]="isMenuOpen">
+      <div class="search-box">
+        <input type="text" placeholder="Search Here......" />
+        <button>Search</button>
+      </div>
+  
+      <div class="main-links">
+        <div class="nav-item-container">
+          <a href="#" class="nav-item" (click)="toggleDropdown('Plan', $event)">
+            <i class="fa-solid fa-route"></i>
+            Plan your Route
+            <i class="fas fa-chevron-down ml-1"></i>
+          </a>
+          <div class="dropdown-menu" [class.show]="dropdowns['Plan']">
+            <a href="/">Bus Info</a>
+            <a href="/">Individual Bus Info</a>
+          </div>
+        </div>
+  
+        <div class="nav-item-container">
+          <a href="#" class="nav-item" (click)="toggleDropdown('Book', $event)">
+            <i class="fa-solid fa-car"></i>
+            Book Your Ride
+            <i class="fas fa-chevron-down ml-1"></i>
+          </a>
+          <div class="dropdown-menu" [class.show]="dropdowns['Book']">
+            <a href="/">Rentals</a>
+            <a href="/">Vehicle Info</a>
+          </div>
+        </div>
+
+        <div class="nav-item-container">
+            <a href="#" class="nav-item" (click)="toggleDropdown('Card', $event)">
+                <i class="fa-solid fa-credit-card"></i>
+              Karachi Card
+              <i class="fas fa-chevron-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu" [class.show]="dropdowns['Card']">
+              <a href="/">Buy Karachi Card</a>
+              <a href="/">Recharge Your Card</a>
+            </div>
+          </div>
+    
+          <div class="nav-item-container">
+            <a href="#" class="nav-item" (click)="toggleDropdown('Fleet', $event)">
+                <i class="fa-solid fa-bus"></i>
+              Bus Fleet
+              <i class="fas fa-chevron-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu" [class.show]="dropdowns['Fleet']">
+              <a href="/">People Bus Service</a>
+              <a href="/">Local Bus</a>
+              <a href="/">BRT</a>
+            </div>
+          </div>
+          <div class="nav-item-container">
+            <a href="#" class="nav-item" (click)="toggleDropdown('login', $event)">
+                <i class="fa-solid fa-right-to-bracket"></i>
+              Login
+              <i class="fas fa-chevron-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu" [class.show]="dropdowns['login']">
+              <a href="/">Login as User</a>
+              <a href="/">Login as Renter</a>
+            </div>
+          </div>
+          <div class="nav-item-container">
+            <a href="#" class="nav-item" (click)="toggleDropdown('vehicle', $event)">
+                <i class="fa-solid fa-key"></i>
+              Rent Your Vehicle
+              <i class="fas fa-chevron-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu" [class.show]="dropdowns['vehicle']">
+              <a href="/">Create Your account</a>
+            </div>
+          </div>
+          <div class="nav-item-container">
+            <a href="#" class="nav-item" (click)="toggleDropdown('renter', $event)">
+                <i class="fa-solid fa-truck-moving"></i>
+              Renter Mode
+              <i class="fas fa-chevron-down ml-1"></i>
+            </a>
+            <div class="dropdown-menu" [class.show]="dropdowns['renter']">
+              <a href="/">View Your Information</a>
+              <a href="/">edit Your Information</a>
+            </div>
+          </div>
+      </div>
+      </div>
   </nav>
-  <div class="overlay"></div>
   

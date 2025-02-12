@@ -1,90 +1,265 @@
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
-/* DB Navigator Red Theme */
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #d00;
+  background: #EC0016;
+  padding: 0.5rem 1rem;
   color: white;
-  padding: 12px 20px;
-  position: relative;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.left {
+.navbar-brand {
   display: flex;
   align-items: center;
-}
-
-.menu-btn {
-  font-size: 24px;
-  background: none;
-  border: none;
-  color: white;
-  margin-right: 15px;
-  cursor: pointer;
-  display: none;
+  gap: 1rem;
 }
 
 .logo {
-  height: 40px;
-}
-
-.nav-links {
-  list-style: none;
   display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.nav-links li a {
+  align-items: center;
+  gap: 0.5rem;
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
-.nav-links li a:hover {
-  opacity: 0.8;
+.logo img {
+  height: 2rem;
 }
 
-/* Mobile Styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.search-box {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.search-box input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.search-box button {
+  padding: 0.5rem 1rem;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background: #444;
+}
+
+.main-links, .user-section {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Base navbar styles */
+.navbar {
+  background: #EC0016;
+  padding: 0.5rem 1rem;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 1000;
+}
+
+/* Main navigation section */
+.main-links, .user-section {
+  display: flex;
+  gap: 0.75rem; /* Reduced from 1.5rem */
+  align-items: center;
+}
+
+/* Dropdown container */
+.nav-item-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown trigger button */
+.nav-item {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem; /* Reduced from 0.5rem */
+  padding: 0.5rem 0.75rem; /* Reduced horizontal padding */
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem; /* Slightly reduced font size */
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Dropdown arrow icon */
+.nav-item .fa-chevron-down {
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+  margin-left: 0.25rem; /* Reduced margin */
+}
+
+.nav-item-container:hover .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px; /* Slightly reduced width */
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1001;
+  margin-top: 0.25rem; /* Reduced from 0.5rem */
+}
+
+/* Show dropdown */
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Dropdown items */
+.dropdown-menu a {
+  color: #333;
+  padding: 0.5rem 0.75rem; /* Reduced padding */
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  font-size: 0.9rem; /* Slightly reduced font size */
+}
+
+/* First and last items border radius */
+.dropdown-menu a:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.dropdown-menu a:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Hover effect for dropdown items */
+.dropdown-menu a:hover {
+  background: #f5f5f5;
+  padding-left: 1rem; /* Reduced indent on hover */
+}
+
+/* Divider between dropdown items */
+.dropdown-menu a:not(:last-child) {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Mobile styles */
 @media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100vh;
-    background: #d00;
-    flex-direction: column;
-    padding: 20px;
-    display: flex;
-  }
-
-  .menu-checkbox {
-    display: none;
-  }
-
-  .menu-checkbox:checked ~ .nav-links {
-    left: 0;
-  }
-
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+  .nav-item-container {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
   }
 
-  .menu-checkbox:checked ~ .overlay {
-    display: block;
+  .main-links, .user-section {
+    gap: 0.25rem; /* Even smaller gap on mobile */
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+    box-shadow: none;
+    margin-top: 0;
+    border-radius: 4px;
+  }
+
+  .dropdown-menu a {
+    color: white;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .dropdown-menu a:hover {
+    background: rgba(255,255,255,0.1);
+    color: white;
+  }
+
+  /* Reset border radius for mobile */
+  .dropdown-menu a:first-child,
+  .dropdown-menu a:last-child {
+    border-radius: 4px;
+  }
+
+  /* Adjust animation for mobile */
+  .dropdown-menu {
+    transform: translateY(0);
+    max-height: 0;
+    overflow: hidden;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.3s ease;
+  }
+
+  .dropdown-menu.show {
+    max-height: 400px;
+  }
+}
+
+/* Active state styles */
+.nav-item.active {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Optional: Add arrow to dropdown */
+.dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -4px; /* Reduced from -6px */
+  left: 15px; /* Reduced from 20px */
+  width: 8px; /* Reduced from 12px */
+  height: 8px; /* Reduced from 12px */
+  background: white;
+  transform: rotate(45deg);
+  box-shadow: -2px -2px 2px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+  .dropdown-menu::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .dropdown-menu::before {
+    display: none;
   }
 }
