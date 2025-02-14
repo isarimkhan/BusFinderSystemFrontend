@@ -17,15 +17,17 @@
   gap: 0.5rem;
   color: white;
   text-decoration: none;
-  font-size: 1.25rem;
-  font-weight: bold;
-  height: 2rem;  /* ✅ Increase if too small */
+  font-size: 2rem;
+  font-family: 'montsert',sans-serif;
+  font-style: italic;
+  font-weight: 900;
+  height:4rem;  /* ✅ Increase if too small */
   max-width: 100%; /* ✅ Prevents cropping */
   display: block;
 }
 
 .logo img {
-  height: 2rem;
+  height: 4rem;
 }
 
 .menu-toggle {
