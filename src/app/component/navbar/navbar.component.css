@@ -19,6 +19,9 @@
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: bold;
+  height: 2rem;  /* ✅ Increase if too small */
+  max-width: 100%; /* ✅ Prevents cropping */
+  display: block;
 }
 
 .logo img {
