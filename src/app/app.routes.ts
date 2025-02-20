@@ -16,6 +16,8 @@ import { CarBookingComponent } from './pages/Customer_Work/car-booking/car-booki
 import { CompanyFirstViewComponent } from './pages/Customer_Work/company-first-view/company-first-view.component';
 import { HomeComponent } from './pages/home/home.component';
 import { VehicleInfoComponent } from './pages/vehicle-info/vehicle-info.component';
+import { RentalInfoComponent } from './pages/rental-info/rental-info.component';
+import { KarachiComponent } from './pages/karachi/karachi.component';
 
 
 
@@ -31,5 +33,7 @@ export const routes: Routes = [
     {path:'vehicle', component:VehicleComponent},
     {path:'home',component:HomeComponent},
     {path:'vehicle-info',component:VehicleInfoComponent},
-    { path: '**', redirectTo: 'vehicle-info'}
+    {path:'rental-info',component:RentalInfoComponent},
+    {path:'karachi',component:KarachiComponent},
+    { path: '**', redirectTo: 'karachi'}
 ];
