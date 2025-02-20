@@ -18,6 +18,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { VehicleInfoComponent } from './pages/vehicle-info/vehicle-info.component';
 import { RentalInfoComponent } from './pages/rental-info/rental-info.component';
 import { KarachiComponent } from './pages/karachi/karachi.component';
+import { RechargeCardComponent } from './pages/recharge-card/recharge-card.component';
 
 
 
@@ -35,5 +36,6 @@ export const routes: Routes = [
     {path:'vehicle-info',component:VehicleInfoComponent},
     {path:'rental-info',component:RentalInfoComponent},
     {path:'karachi',component:KarachiComponent},
-    { path: '**', redirectTo: 'karachi'}
+    {path:'recharge-card',component:RechargeCardComponent},
+    { path: '**', redirectTo: 'recharge-card'}
 ];
