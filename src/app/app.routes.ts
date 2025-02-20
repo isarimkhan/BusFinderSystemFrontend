@@ -15,6 +15,7 @@ import { FirstViewComponent } from './pages/Customer_Work/first-view/first-view.
 import { CarBookingComponent } from './pages/Customer_Work/car-booking/car-booking.component';
 import { CompanyFirstViewComponent } from './pages/Customer_Work/company-first-view/company-first-view.component';
 import { HomeComponent } from './pages/home/home.component';
+import { VehicleInfoComponent } from './pages/vehicle-info/vehicle-info.component';
 
 
 
@@ -29,5 +30,6 @@ export const routes: Routes = [
     {path: 'fare-details/:busId', component:FareDetailsComponent},
     {path:'vehicle', component:VehicleComponent},
     {path:'home',component:HomeComponent},
-    { path: '**', redirectTo: 'home'}
+    {path:'vehicle-info',component:VehicleInfoComponent},
+    { path: '**', redirectTo: 'vehicle-info'}
 ];
